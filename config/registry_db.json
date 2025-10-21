@@ -1,0 +1,165 @@
+{
+  "version": "1.0",
+  "created": "2025-10-20T22:45:19.445459",
+  "modified": "2025-10-21T04:04:57.994108",
+  "files": {
+    "C:\\Reg Organizer TG\\reg_files\\beispiel_test.reg": {
+      "title": "Test Registry-Datei",
+      "category": "System",
+      "description": "Eine Test-Datei für den Registry Manager",
+      "tags": [],
+      "created": "2025-10-20T22:45:19.446494",
+      "modified": "2025-10-21T04:04:52.783477",
+      "file_size": 616,
+      "file_hash": "fb474e6419a3f41c57ca223f726e0d8d",
+      "file_modified": "2025-10-20T22:44:46.345204"
+    },
+    "C:\\Reg Organizer TG\\reg_files\\hide_desktop_icons.reg": {
+      "title": "Hide Desktop Icons",
+      "category": "System",
+      "description": "Versteckt Desktop-Icons",
+      "tags": [],
+      "created": "2025-10-21T00:06:27.522458",
+      "modified": "2025-10-21T02:07:07.368621",
+      "file_size": 566,
+      "file_hash": "d98b2223c5e105d75b89fea5c00df161",
+      "file_modified": "2025-10-20T22:47:02.013124"
+    },
+    "C:\\Reg Organizer TG\\reg_files\\test_created.reg": {
+      "title": "Test Created",
+      "category": "Software",
+      "description": "Registry-Einstellungen für Test Created",
+      "tags": [],
+      "created": "2025-10-21T00:06:27.536672",
+      "modified": "2025-10-21T04:04:52.785477",
+      "file_size": 348,
+      "file_hash": "c7f0e102a8fe09a7e166e4b6f573ec57",
+      "file_modified": "2025-10-20T22:45:19.431726"
+    },
+    "C:\\Reg Organizer TG\\reg_files\\vscode-context-menu.reg": {
+      "title": "Vscode Context Menu",
+      "category": "Entwicklung",
+      "description": "Erweitert Kontextmenü",
+      "tags": [],
+      "created": "2025-10-21T00:06:27.548522",
+      "modified": "2025-10-21T01:14:43.115061",
+      "file_size": 2370,
+      "file_hash": "973b2f36f91bce6b6ccf538bd66dc182",
+      "file_modified": "2025-10-20T18:29:35.827543"
+    },
+    "C:\\Reg Organizer TG\\reg_files\\windows_dark_theme.reg": {
+      "title": "Windows Dark Theme",
+      "category": "Design",
+      "description": "Aktiviert dunkles Design",
+      "tags": [],
+      "created": "2025-10-21T00:06:27.556668",
+      "modified": "2025-10-21T01:15:33.888082",
+      "file_size": 630,
+      "file_hash": "b204ce1d65da88d5c0a4fb7b166303ad",
+      "file_modified": "2025-10-20T22:47:01.937929"
+    },
+    "C:\\Reg Organizer TG\\reg_files\\test_embed_example.reg": {
+      "title": "",
+      "category": "Netzwerk",
+      "description": "Registry-Einstellungen für Test Embed Example",
+      "tags": [],
+      "created": "2025-10-21T01:02:47.425249",
+      "modified": "2025-10-21T04:04:52.787477",
+      "file_size": 597,
+      "file_hash": "30ca801fe0632453e69408f49b72078f",
+      "file_modified": "2025-10-21T00:59:52.040502"
+    },
+    "C:\\Reg Organizer TG\\reg_files\\test_wallpaper_quality.reg": {
+      "title": "",
+      "category": "System",
+      "description": "Desktop-Konfiguration",
+      "tags": [],
+      "created": "2025-10-21T01:02:47.431625",
+      "modified": "2025-10-21T02:07:48.498907",
+      "file_size": 411,
+      "file_hash": "2d9932913432f5c1195b233994ff9737",
+      "file_modified": "2025-10-21T00:59:52.109247"
+    }
+  },
+  "embedded_regs": {
+    "embedded_vscode-context-menu_20251021_005438": {
+      "content": "Windows Registry Editor Version 5.00\n\n; Hinzufügen von \"Mit VS Code öffnen\" zum Kontextmenü für Ordner\n[HKEY_CLASSES_ROOT\\Directory\\shell\\VSCode]\n@=\"Mit VS Code öffnen\"\n\"Icon\"=\"\\\"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Programs\\\\Microsoft VS Code\\\\Code.exe\\\",0\"\n\n[HKEY_CLASSES_ROOT\\Directory\\shell\\VSCode\\command]\n@=\"\\\"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Programs\\\\Microsoft VS Code\\\\Code.exe\\\" \\\"%1\\\"\"\n\n; Hinzufügen von \"Mit VS Code öffnen\" zum Kontextmenü für Ordner-Hintergrund\n[HKEY_CLASSES_ROOT\\Directory\\Background\\shell\\VSCode]\n@=\"Mit VS Code hier öffnen\"\n\"Icon\"=\"\\\"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Programs\\\\Microsoft VS Code\\\\Code.exe\\\",0\"\n\n[HKEY_CLASSES_ROOT\\Directory\\Background\\shell\\VSCode\\command]\n@=\"\\\"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Programs\\\\Microsoft VS Code\\\\Code.exe\\\" \\\"%V\\\"\"\n\n; Hinzufügen von \"Mit VS Code öffnen\" zum Kontextmenü für Dateien\n[HKEY_CLASSES_ROOT\\*\\shell\\VSCode]\n@=\"Mit VS Code öffnen\"\n\"Icon\"=\"\\\"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Programs\\\\Microsoft VS Code\\\\Code.exe\\\",0\"\n\n[HKEY_CLASSES_ROOT\\*\\shell\\VSCode\\command]\n@=\"\\\"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Programs\\\\Microsoft VS Code\\\\Code.exe\\\" \\\"%1\\\"\"\n",
+      "metadata": {
+        "name": "Vscode Context Menu",
+        "description": "Erweitert Kontextmenü",
+        "category": "Entwicklung",
+        "original_file": "C:\\vscode-context-menu.reg",
+        "file_size": 2370,
+        "status": "Inaktiv",
+        "created_date": "2025-10-21T00:54:38.928655",
+        "embedded": true,
+        "last_applied": "2025-10-21T02:06:35.458663"
+      },
+      "embedded_date": "2025-10-21T02:06:44.126756",
+      "last_used": null,
+      "use_count": 0
+    },
+    "embedded_vscode-context-menu_20251021_011449": {
+      "content": "Windows Registry Editor Version 5.00\n\n; Hinzufügen von \"Mit VS Code öffnen\" zum Kontextmenü für Ordner\n[HKEY_CLASSES_ROOT\\Directory\\shell\\VSCode]\n@=\"Mit VS Code öffnen\"\n\"Icon\"=\"\\\"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Programs\\\\Microsoft VS Code\\\\Code.exe\\\",0\"\n\n[HKEY_CLASSES_ROOT\\Directory\\shell\\VSCode\\command]\n@=\"\\\"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Programs\\\\Microsoft VS Code\\\\Code.exe\\\" \\\"%1\\\"\"\n\n; Hinzufügen von \"Mit VS Code öffnen\" zum Kontextmenü für Ordner-Hintergrund\n[HKEY_CLASSES_ROOT\\Directory\\Background\\shell\\VSCode]\n@=\"Mit VS Code hier öffnen\"\n\"Icon\"=\"\\\"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Programs\\\\Microsoft VS Code\\\\Code.exe\\\",0\"\n\n[HKEY_CLASSES_ROOT\\Directory\\Background\\shell\\VSCode\\command]\n@=\"\\\"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Programs\\\\Microsoft VS Code\\\\Code.exe\\\" \\\"%V\\\"\"\n\n; Hinzufügen von \"Mit VS Code öffnen\" zum Kontextmenü für Dateien\n[HKEY_CLASSES_ROOT\\*\\shell\\VSCode]\n@=\"Mit VS Code öffnen\"\n\"Icon\"=\"\\\"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Programs\\\\Microsoft VS Code\\\\Code.exe\\\",0\"\n\n[HKEY_CLASSES_ROOT\\*\\shell\\VSCode\\command]\n@=\"\\\"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Programs\\\\Microsoft VS Code\\\\Code.exe\\\" \\\"%1\\\"\"\n",
+      "metadata": {
+        "name": "Vscode Context Menu",
+        "description": "Erweitert Kontextmenü",
+        "category": "Entwicklung",
+        "original_file": "C:\\Reg Organizer TG\\reg_files\\vscode-context-menu.reg",
+        "file_size": 2370,
+        "status": "Aktiv",
+        "created_date": "2025-10-21T01:14:49.670909",
+        "embedded": true,
+        "last_applied": "2025-10-21T04:04:52.776477"
+      },
+      "embedded_date": "2025-10-21T04:04:52.780477",
+      "last_used": null,
+      "use_count": 0
+    },
+    "embedded_windows_dark_theme_20251021_011544": {
+      "content": "Windows Registry Editor Version 5.00\n\n; ==========================================\n; Windows Dark Theme Aktivierung\n; \n; Diese Registry-Datei aktiviert das dunkle Theme\n; für Windows Apps und das System.\n; \n; Erstellt am: 20.10.2025\n; Kategorie: UI-Anpassungen\n; ==========================================\n\n[HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize]\n\"AppsUseLightTheme\"=dword:00000000\n\"SystemUsesLightTheme\"=dword:00000000\n\n[HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize]\n\"ColorPrevalence\"=dword:00000000\n\"EnableTransparency\"=dword:00000001",
+      "metadata": {
+        "name": "Windows Dark Theme",
+        "description": "Aktiviert dunkles Design",
+        "category": "Design",
+        "original_file": "C:\\Reg Organizer TG\\reg_files\\windows_dark_theme.reg",
+        "file_size": 630,
+        "status": "Inaktiv",
+        "created_date": "2025-10-21T01:15:44.255666",
+        "embedded": true,
+        "last_applied": "2025-10-21T01:15:48.707730"
+      },
+      "embedded_date": "2025-10-21T01:15:54.591398",
+      "last_used": null,
+      "use_count": 0
+    },
+    "embedded_hide_desktop_icons_20251021_020739": {
+      "content": "Windows Registry Editor Version 5.00\n\n; ==========================================\n; Desktop Icons ausblenden\n; \n; Blendet alle Desktop-Icons aus für einen\n; sauberen Desktop-Look.\n; \n; Erstellt am: 20.10.2025  \n; Kategorie: UI-Anpassungen\n; ==========================================\n\n[HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced]\n\"HideIcons\"=dword:00000001\n\n; Änderung sofort anwenden (Desktop neu laden)\n[HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer]\n\"DesktopIconRefresh\"=dword:00000001",
+      "metadata": {
+        "name": "Hide Desktop Icons",
+        "description": "Versteckt Desktop-Icons",
+        "category": "System",
+        "original_file": "C:\\Reg Organizer TG\\reg_files\\hide_desktop_icons.reg",
+        "file_size": 566,
+        "status": "Inaktiv",
+        "created_date": "2025-10-21T02:07:39.241280",
+        "embedded": true,
+        "last_applied": "2025-10-21T02:07:42.939928"
+      },
+      "embedded_date": "2025-10-21T02:07:48.463128",
+      "last_used": null,
+      "use_count": 0
+    }
+  },
+  "categories": [
+    "System",
+    "Registry-Tweaks",
+    "Sicherheit",
+    "Performance",
+    "UI-Anpassungen",
+    "Netzwerk",
+    "Software",
+    "Sonstiges"
+  ],
+  "tags": []
+}

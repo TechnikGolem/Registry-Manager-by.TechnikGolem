@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+ENV/
+
+# PyInstaller
+*.spec
+build/
+dist/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+logs/
+*.log
+
+# Backups
+backups/
+
+# Database (optional - kann auch commited werden für portable app)
+# registry_manager.db
+
+# Config (optional - kann auch commited werden)
+# config/
+
+# Temporäre Dateien
+*.tmp
+*.temp
+temp/
+tmp/

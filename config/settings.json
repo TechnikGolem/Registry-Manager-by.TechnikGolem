@@ -1,0 +1,9 @@
+{
+  "popup_timeout_success": 0.5,
+  "popup_timeout_error": 0.5,
+  "popup_timeout_info": 0.5,
+  "auto_backup": true,
+  "backup_retention_days": 30,
+  "auto_status_check": true,
+  "debug_mode": false
+}

@@ -1,0 +1,51 @@
+{
+  "version": "1.0.0",
+  "name": "Registry File Manager",
+  "description": "Tool zur Verwaltung von Windows Registry-Files",
+  "settings": {
+    "gui": {
+      "theme": "default",
+      "window_size": "1200x800",
+      "auto_refresh": true,
+      "confirm_dangerous_operations": true
+    },
+    "logging": {
+      "level": "INFO",
+      "log_to_file": true,
+      "log_to_console": true,
+      "max_log_files": 5,
+      "cleanup_days": 30
+    },
+    "registry": {
+      "backup_before_apply": true,
+      "check_status_on_load": false,
+      "warn_system_keys": true,
+      "auto_validate": true
+    },
+    "database": {
+      "auto_cleanup_missing": false,
+      "backup_on_exit": true
+    }
+  },
+  "paths": {
+    "reg_files": "./reg_files",
+    "logs": "./logs",
+    "config": "./config",
+    "docs": "./docs",
+    "backups": "./backups"
+  },
+  "categories": [
+    "System",
+    "Registry-Tweaks",
+    "Sicherheit", 
+    "Performance",
+    "UI-Anpassungen",
+    "Netzwerk",
+    "Software",
+    "Sonstiges"
+  ],
+  "templates": {
+    "enabled": true,
+    "custom_templates_path": "./config/custom_templates.json"
+  }
+}
