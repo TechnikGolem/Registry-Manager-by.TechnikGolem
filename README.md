@@ -1,210 +1,185 @@
-# Registry File Manager
+# 🗂️ Registry File Manager v1.0
 
-Ein umfassendes Tool zur Verwaltung von Windows Registry-Files (.reg) mit grafischer Benutzeroberfläche.
+**Portable Windows Registry Manager mit SQLite-Datenbank, Gruppen-Management und Auto-Restart**
 
-## 🚀 Funktionen
+Ein professionelles Tool zur Verwaltung, Organisation und Anwendung von Windows Registry-Files (.reg) mit moderner GUI.
 
-### Kernfunktionen
-- **Registry-File-Erstellung**: Einfache Erstellung neuer .reg-Dateien mit intuitivem Editor
-- **Sammlung & Organisation**: Zentrale Verwaltung aller Registry-Files mit Kategorisierung
-- **Dokumentation**: Detaillierte Beschreibung und Metadaten für jede Datei
-- **Status-Überprüfung**: Überprüfung ob Registry-Einträge tatsächlich aktiv sind
-- **Import/Export**: Backup und Wiederherstellung von Registry-Sammlungen
+![Windows](https://img.shields.io/badge/Windows-10%2F11-blue)
+![Python](https://img.shields.io/badge/Python-3.8%2B-green)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
-### Erweiterte Features
-- **Vorlagen-System**: Vordefinierte Templates für häufige Registry-Tweaks
-- **Status-Monitoring**: Visueller Vergleich zwischen .reg-Dateien und aktueller Registry
-- **Sicherheitsprüfung**: Warnungen vor potentiell gefährlichen Registry-Änderungen
-- **Batch-Operationen**: Mehrere Registry-Files gleichzeitig verarbeiten
-- **Such- und Filterfunktionen**: Schnelles Finden bestimmter Registry-Einträge
+## ✨ Hauptfeatures
 
-## 📋 Systemanforderungen
+### 📦 **Portable App**
+- ✅ Komplette Anwendung in einer EXE-Datei
+- ✅ Embedded Registry-Files in SQLite-Datenbank
+- ✅ Keine Installation erforderlich
+- ✅ Alle Daten in einer portablen Datei
 
-- **Betriebssystem**: Windows 10/11 (Registry-spezifisch)
-- **Python**: Version 3.8 oder höher
-- **GUI-Framework**: tkinter (standardmäßig in Python enthalten)
-- **Berechtigung**: Administrator-Rechte für Registry-Zugriff empfohlen
+### 🗂️ **Gruppen-Management**
+- ✅ REG-Dateien in Gruppen organisieren
+- ✅ Custom Icons (📁📂🗂️📋⭐🎯🔧⚙️🎨🚀)
+- ✅ Gruppenwechsel (automatisch aus alter Gruppe entfernt)
+- ✅ "Ohne Gruppe" für nicht-gruppierte REGs
 
-## 🛠️ Installation
+### 🎯 **Registry-Operationen**
+- ✅ **Erstellen** - Neue REG-Dateien mit GUI
+- ✅ **Einbetten** - In Datenbank speichern
+- ✅ **Aktivieren** - Registry-Änderungen anwenden
+- ✅ **Deaktivieren** - Echtes Löschen mit `[-KEY]` Syntax
+- ✅ **Status prüfen** - Erkennt aktive/inaktive Einträge
+- ✅ **Löschen** - Aus Sammlung oder von Festplatte
 
-### 1. Repository klonen oder herunterladen
+### 🔄 **Neustart-Funktionen**
+- ✅ **Explorer neu starten** - Für Kontextmenü-Updates
+- ✅ **Windows neu starten** - Mit Auto-Wiederstart
+  - RunOnce Registry-Eintrag
+  - App öffnet sich automatisch nach Neustart
+  - Zeigt aktualisierten Status
+
+### 🛡️ **Sicherheit**
+- ✅ Automatische Backups vor Registry-Änderungen
+- ✅ Bestätigungs-Dialoge
+- ✅ Detailliertes Logging
+- ✅ Wiederherstellungs-Funktionen
+
+## 🚀 Installation
+
+### Als EXE (Empfohlen)
+1. Download `RegistryManager.exe` aus Releases
+2. Starte die EXE - fertig!
+3. Alle Daten in `registry_manager.db`
+
+### Aus Source
 ```bash
-git clone <repository-url>
-cd "Reg Organizer TG"
-```
-
-### 2. Python-Abhängigkeiten
-Das Projekt nutzt ausschließlich Python-Standard-Bibliotheken:
-- `tkinter` - GUI-Framework
-- `winreg` - Windows Registry-Zugriff
-- `json` - Datenbank/Konfiguration
-- `logging` - Protokollierung
-- `pathlib` - Dateisystem-Operationen
-
-### 3. Anwendung starten
-```bash
+git clone https://github.com/DEIN-USERNAME/registry-file-manager.git
+cd registry-file-manager
+python -m venv .venv
+.venv\Scripts\activate
+pip install pyinstaller
 python main.py
 ```
 
-## 📖 Verwendung
-
-### Registry-File erstellen
-1. **Datei → Neue REG-Datei erstellen** oder Toolbar-Button "Neue REG-Datei"
-2. Datei-Informationen eingeben (Name, Titel, Beschreibung)
-3. Registry-Einträge hinzufügen:
-   - Registry-Key-Pfad angeben
-   - Wert-Name und -Typ auswählen
-   - Wert-Daten eingeben
-4. Vorschau prüfen und speichern
-
-### Status prüfen
-1. Registry-File aus der Sammlung auswählen
-2. **Registry → Status prüfen** oder Toolbar-Button "Status prüfen"
-3. Ergebnisse im **Status-Tab** ansehen:
-   - ✅ Grün: Werte stimmen überein
-   - ⚠️ Orange: Werte sind unterschiedlich  
-   - ❌ Rot: Werte/Keys fehlen
-
-### Sammlung verwalten
-- **Import**: Bestehende .reg-Dateien in die Sammlung importieren
-- **Export**: Komplette Sammlung mit Dokumentation exportieren
-- **Dokumentation**: Titel, Kategorie und Beschreibung für jede Datei
-- **Suche**: Nach Dateinamen, Beschreibung oder Kategorien filtern
-
-## 🗂️ Projektstruktur
-
-```
-Reg Organizer TG/
-├── main.py                 # Hauptanwendung
-├── src/                    # Quellcode
-│   ├── gui/               # GUI-Module
-│   │   ├── main_window.py # Hauptfenster
-│   │   ├── reg_editor.py  # Registry-Editor
-│   │   └── status_display.py # Status-Anzeige
-│   ├── registry/          # Registry-Operationen
-│   │   ├── reg_creator.py # .reg-Datei-Erstellung
-│   │   ├── reg_parser.py  # .reg-Datei-Parser
-│   │   └── status_checker.py # Status-Überprüfung
-│   ├── database/          # Datenbank/Storage
-│   │   └── registry_db.py # JSON-basierte Datenbank
-│   └── utils/             # Hilfsfunktionen
-│       └── logger.py      # Logging-System
-├── reg_files/             # Gesammelte .reg-Dateien
-├── config/                # Konfigurationsdateien
-├── docs/                  # Dokumentation
-├── logs/                  # Log-Dateien
-└── README.md             # Diese Datei
+### EXE selbst erstellen
+```bash
+python build_exe.py
+# EXE: dist/RegistryManager.exe
 ```
 
-## 🔧 Konfiguration
+## 📋 Verwendung
 
-### Log-Level anpassen
-In `src/utils/logger.py` können Log-Einstellungen angepasst werden:
-```python
-setup_logging(
-    log_level="INFO",      # DEBUG, INFO, WARNING, ERROR, CRITICAL
-    log_to_file=True,      # In Datei loggen
-    log_to_console=True    # In Konsole loggen
-)
+### 1. REG einbetten
+```
+Klick "REG einbetten" → Datei wählen → In Datenbank gespeichert!
+Original bleibt erhalten
 ```
 
-### Vorlagen erweitern
-Neue Registry-Vorlagen in `src/registry/reg_creator.py` hinzufügen:
-```python
-templates = {
-    'meine_vorlage': {
-        'keys': {
-            'HKEY_CURRENT_USER\\Software\\MeinKey': {
-                'values': {
-                    'MeinWert': {'type': 'REG_DWORD', 'data': 1}
-                }
-            }
-        }
-    }
-}
+### 2. Gruppe erstellen
+```
+Klick "📁 Gruppe erstellen" → Name + Icon → Fertig
+Rechtsklick auf REG → "Gruppen" → Gruppe wählen
 ```
 
-## ⚠️ Sicherheitshinweise
-
-### Registry-Manipulation
-- **Backup erstellen**: Immer vor größeren Änderungen ein Registry-Backup erstellen
-- **Administrator-Rechte**: Für Systemeinstellungen erforderlich
-- **Vorsicht bei HKLM**: Besondere Vorsicht bei HKEY_LOCAL_MACHINE Änderungen
-- **Testen**: Änderungen erst in einer VM oder Testumgebung testen
-
-### Empfohlener Workflow
-1. Registry-Backup erstellen (`Registry → Backup erstellen`)
-2. .reg-Datei mit Tool erstellen und prüfen
-3. Status vor Anwendung überprüfen
-4. .reg-Datei anwenden
-5. Funktionalität testen
-6. Bei Problemen: Backup wiederherstellen
-
-## 🐛 Problembehandlung
-
-### Häufige Probleme
-
-**Fehler: "Import konnte nicht aufgelöst werden"**
-- Lösung: Python-Pfad prüfen, Anwendung aus Hauptverzeichnis starten
-
-**Registry-Zugriff verweigert**
-- Lösung: Als Administrator ausführen, Benutzerrechte prüfen
-
-**Datei kann nicht gespeichert werden**
-- Lösung: Schreibrechte für Zielverzeichnis prüfen
-
-**Status-Prüfung schlägt fehl**
-- Lösung: Registry-Key-Pfad validieren, Berechtigung prüfen
-
-### Log-Dateien
-Detaillierte Fehlermeldungen finden sich in:
-- `logs/registry_manager_YYYYMMDD.log`
-
-### Debug-Modus
-Für detaillierte Logs Debug-Modus aktivieren:
-```python
-setup_logging(log_level="DEBUG")
+### 3. Registry anwenden
+```
+REG auswählen → Rechtsklick → "🟢 Aktivieren"
+Automatisches Backup → Registry-Änderung → Fertig!
 ```
 
-## 📝 Lizenz
+### 4. Nach Änderung neu starten
+```
+🔄 Explorer neu starten - Für Kontextmenüs
+🔄 PC neu starten - Mit Auto-Wiederstart der App!
+```
 
-Dieses Projekt steht unter der MIT-Lizenz. Siehe LICENSE-Datei für Details.
+## 🗄️ Technologie
 
-## 🤝 Beitragen
+- **GUI**: tkinter
+- **Datenbank**: SQLite3
+- **Registry**: winreg (Windows API)
+- **Build**: PyInstaller
+- **Encoding**: UTF-8-sig, UTF-16, CP1252, Latin1
 
-Beiträge sind willkommen! Bitte:
-1. Fork des Repositories erstellen
-2. Feature-Branch erstellen (`git checkout -b feature/AmazingFeature`)
-3. Änderungen committen (`git commit -m 'Add some AmazingFeature'`)
-4. Branch pushen (`git push origin feature/AmazingFeature`)
-5. Pull Request öffnen
+## 📁 Projektstruktur
 
-## 📧 Support
+```
+registry-file-manager/
+├── main.py                      # Einstiegspunkt
+├── build_exe.py                 # EXE-Builder
+├── src/
+│   ├── gui/                     # GUI-Module
+│   │   ├── main_window.py       # Hauptfenster
+│   │   ├── reg_editor.py        # REG-Editor
+│   │   └── settings_window.py   # Einstellungen
+│   ├── registry/                # Registry-Ops
+│   │   ├── reg_parser.py        # Parser
+│   │   ├── reg_creator.py       # Creator
+│   │   └── status_checker.py    # Status
+│   ├── database/                # Datenbank
+│   │   └── sqlite_db.py         # SQLite DB
+│   └── utils/                   # Tools
+│       ├── system_restart.py    # Neustart
+│       ├── backup_manager.py    # Backups
+│       └── content_analyzer.py  # Analyse
+└── registry_manager.db          # SQLite DB
+```
 
-Bei Fragen oder Problemen:
-- Issue im Repository erstellen
-- Log-Dateien mit Fehlerbeschreibung bereitstellen
-- Systemkonfiguration angeben (Windows-Version, Python-Version)
+## ⚙️ Datenbank-Schema
 
-## 🎯 Roadmap
+```sql
+-- Embedded REGs
+CREATE TABLE embedded_regs (
+    id TEXT PRIMARY KEY,
+    name TEXT,
+    content TEXT,
+    status TEXT,
+    category TEXT,
+    -- ...
+);
 
-### Geplante Features
-- [ ] Registry-Diff-Tool (Vergleich zweier Registry-Zustände)
-- [ ] Automatische Backup-Erstellung vor .reg-Anwendung
-- [ ] Registry-Key-Browser mit Suche
-- [ ] Export in verschiedene Formate (XML, CSV)
-- [ ] Kommandozeilen-Interface
-- [ ] Plugin-System für Erweiterungen
-- [ ] Registry-Monitoring (Änderungen in Echtzeit)
-- [ ] Mehrsprachigkeit (English, Deutsch)
+-- Gruppen
+CREATE TABLE groups (
+    id TEXT PRIMARY KEY,
+    name TEXT UNIQUE,
+    icon TEXT,
+    -- ...
+);
 
-### Verbesserungen
-- [ ] Performance-Optimierung für große Registry-Files
-- [ ] Erweiterte Such- und Filterfunktionen
-- [ ] Bessere Integration mit Windows-Explorer
-- [ ] Erweiterte Vorlagen-Verwaltung
-- [ ] Import/Export für andere Registry-Tools
+-- Zuordnung (n:m)
+CREATE TABLE reg_groups (
+    reg_id TEXT,
+    group_id TEXT,
+    PRIMARY KEY (reg_id, group_id)
+);
+```
+
+## ⚠️ Wichtig
+
+- **Admin-Rechte** für Registry-Zugriff nötig
+- **Backups** werden automatisch erstellt
+- **Deaktivieren** löscht Keys mit `[-HKEY_...]`
+- **Embedded REGs** bleiben in DB auch wenn Original weg
+
+## 🐛 Bekannte Limits
+
+- Nur Windows
+- Admin-Rechte erforderlich
+- DB wächst mit Anzahl REGs
+
+## 📜 Lizenz
+
+MIT License
+
+## 🤝 Mitwirken
+
+PRs willkommen!
+
+1. Fork
+2. Feature Branch
+3. Commit
+4. Push
+5. Pull Request
 
 ---
 
-**Registry File Manager v1.0** - Ein Tool von Registry-Enthusiasten für Registry-Enthusiasten! 🚀# Registry-Manager-by-TechnikGolem
+**Mit ❤️ entwickelt für effizientes Registry-Management**
