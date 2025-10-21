@@ -207,4 +207,4 @@ Bei Fragen oder Problemen:
 
 ---
 
-**Registry File Manager v1.0** - Ein Tool von Registry-Enthusiasten für Registry-Enthusiasten! 🚀
+**Registry File Manager v1.0** - Ein Tool von Registry-Enthusiasten für Registry-Enthusiasten! 🚀# Registry-Manager-by-TechnikGolem
